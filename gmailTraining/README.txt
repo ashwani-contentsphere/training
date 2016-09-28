@@ -1,0 +1,1 @@
+This is a training task to create a gmail application.
