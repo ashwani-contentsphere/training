@@ -1,0 +1,104 @@
+div {
+    display: block;
+}
+#wrapper {
+    width: 1300px;
+    height:1000px;
+}
+
+#first {
+    float:left;
+    width: 17%;
+    height: 112%;
+    background: #EFF6F8  ;
+    position:fixed;
+
+}
+
+#second {
+    float:left;
+    width: 83%;
+    height: 12%;
+    background: #D8CBC8  ;
+    margin-left: 230px;
+    position:fixed;
+}
+
+#third {
+    float:left;
+    width: 83%;
+    height: 100%;
+    background: #EBF1F2  ;
+    margin-left: 230px;
+    margin-top: 75px;
+
+}
+#inbox
+{
+    background: #EFF6F8;
+    margin-left: 18px;
+    margin-top: 0px;
+    border: none;
+    color: red;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+}
+#sentmails
+{        background:#EFF6F8   ;
+    margin-left: 2px;
+
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+#compose {
+    margin-left: 35px;
+    margin-top: 85px;
+    background-color: #ff5454;
+    border: none;
+    color: white;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+}
+#search
+{
+    margin-left: 840px;
+
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+}
+
+
+input[type="text"]  {
+    display: block;
+    margin: auto auto auto;
+    margin-top: 41px;
+    width: 50%;
+    height: 23%;
+}
+
+
+
+.messages {
+    height: 4%;
+    background-color: #F4FBFC  ;
+
+
+}
