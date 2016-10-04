@@ -1,8 +1,8 @@
 $(function () {
 
-    $('#wrapper').append("<div id='first'><button type='button' id='compose'>compose</button>" +
+    $('#wrapper').append("<div id='first'><img src='gmail.jpg'  width='42' height='42' id='logo'><button type='button' id='compose'>compose</button>" +
         "<button type='button' id='inbox'>inbox (2)</button><button type='button' id='sentmails'>Sent Mails</button>"
-        +"<div id='starred'>Starred</div>"+"<div id='D'>Starred</div>"+"<div id='starred'>Starred</div>"+
+        +"<div id='D'>Starred</div>"+"<div id='D'>Drafts</div>"+"<div id='D'>Spam</div>"+
         "</div> <div id='second'> <input type='text' name='search' id='find'><button type='button' id='search'>search</button><br></div>" +
         "<div id='third'></div>"+"<div id='dialog'>" +
 
@@ -43,7 +43,7 @@ $(function () {
         $("#third").append(
             $.ajax({
 
-                url: "3.php",
+                url: "Controller.php/getData?view=sentmails",
                 //force to handle it as text
                 dataType: "text",
                 success: function (data) {
@@ -56,7 +56,7 @@ $(function () {
     });
     $("#search").click(function(){
         var x=document.getElementById("find").value;
-        alert(x);
+
         $("#third").empty();
         $("#third").append(
             $.ajax({
@@ -72,7 +72,7 @@ $(function () {
 
 
     $.ajax({
-        url: "data1.json",
+        url: "Controller.php/getData?view=all",
         dataType: "text",
         success: function (data) {
             dataSuccess(JSON.parse(data));
@@ -102,13 +102,12 @@ dataSuccess = function (json) {
         $("#third").append(
             $.ajax({
 
-                //url: "1.php/getData?q="+x,
-                url: "GInbox.php",
+                url: "Controller.php/getData?view=single&id="+x,
+
                 dataType: "text",
                 success: function (data) {
-                    alert(data);
                     var json=JSON.parse(data)
-                    $("#third").append(json.firstName);
+                    $("#third").append("Name"+json.firstName+"  "+"Message : "+json.message);
 
                 }
             })

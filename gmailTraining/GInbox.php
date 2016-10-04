@@ -8,14 +8,14 @@ Class Ginbox
     private $inmessages;
 
 
-    public function getMessages()
+    public function getInboxMessages()
     {
         $inmessages = file_get_contents('data1.json');
         file_put_contents("results.txt", print_r($inmessages, 1), 8);
         return $inmessages;
     }
 
-    public function getMessage($id)
+    public function getInboxMessage($id)
     {
         $str = file_get_contents('data1.json');
         $array = json_decode($str, true);
@@ -26,7 +26,7 @@ Class Ginbox
 
     }
 
-    public function sentMails($data){
+    public function saveSentMails($data){
         $myfile = fopen("newfile.txt", "a");
         fwrite($myfile,$data);
     }
@@ -39,7 +39,24 @@ Class Ginbox
         return $str;
     }
 
-    public function
+    public function searchMails($string)
+    {
+
+        $str = file_get_contents('data1.json');
+        $array = json_decode($str, true);
+        $data="[";
+        for($i=0;$i<count($array);$i++)
+        {
+            if (strpos($array[$i]["firstName"], $string) !== false||strpos($array[$i]["message"], $string) !== false)
+            {
+                $data=$data.'{"firstName":'.'"'.$array[$i]["firstName"].'"'.','.'"message":'.'"'.$array[$i]["message"].'"'.'},';
+            }
+        }
+        $data=substr($data, 0, -1);
+        $data=$data.']';
+        return $data;
+
+    }
 
 
 
@@ -49,10 +66,7 @@ Class Ginbox
 
 
 
-$obj=new Ginbox();
 
-
-echo $obj->getMessage(0);
 
 
 ?>

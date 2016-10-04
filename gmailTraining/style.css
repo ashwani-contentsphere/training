@@ -33,6 +33,24 @@ div {
     margin-top: 75px;
 
 }
+
+#logo
+{
+
+    margin-left: 35px;
+    margin-top: 9px;
+    border: none;
+    color: white;
+    padding: 0px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+    width: 61px;
+    height: 57px;
+
+}
+
 #inbox
 {
     background: #EFF6F8;
@@ -40,6 +58,19 @@ div {
     margin-top: 0px;
     border: none;
     color: red;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+}
+#D
+{
+    background: #EFF6F8;
+    margin-left: 18px;
+    margin-top: 0px;
+    border: none;
+    color: black;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -61,11 +92,11 @@ div {
 
 #compose {
     margin-left: 35px;
-    margin-top: 85px;
+    margin-top: 28px;
     background-color: #ff5454;
     border: none;
     color: white;
-    padding: 7px 20px;
+    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -73,27 +104,54 @@ div {
 }
 #search
 {
-    margin-left: 840px;
-
+    margin-top: -33px;
+    margin-left: 738px;
     background-color: blue;
     border: none;
     color: white;
-    padding: 7px 20px;
+    padding: 11px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 10px;
+    position: absolute
 }
 
 
-input[type="text"]  {
+#find  {
     display: block;
     margin: auto auto auto;
-    margin-top: 41px;
+    margin-top: 24px;
+    margin-left: 24px;
     width: 50%;
     height: 23%;
+    padding: 6px 75px;
 }
 
+#to  {
+    display: block;
+    margin: auto auto auto;
+    margin-top: -7px;
+    width: 50%;
+    height: 23%;
+    padding: 11px 75px;
+}
+#subject  {
+    display: block;
+    margin: auto auto auto;
+    margin-top: -1px;
+    width: 50%;
+    height: 23%;
+    padding: 11px 75px;
+}
+#msg  {
+    display: block;
+    margin: auto auto auto;
+    margin-top: -1px;
+    width: 50%;
+    height: 23%;
+    padding: 119px 75px;
+}
 
 
 .messages {
