@@ -1,9 +1,9 @@
 $(function () {
 
-    $('#wrapper').append("<div id='first'><img src='gmail.jpg'  width='42' height='42' id='logo'><button type='button' id='compose'>compose</button>" +
+    $('#wrapper').append("<div id='first'><button type='button' id='compose'>compose</button>" +
         "<button type='button' id='inbox'>inbox (2)</button><button type='button' id='sentmails'>Sent Mails</button>"
         +"<div id='D'>Starred</div>"+"<div id='D'>Drafts</div>"+"<div id='D'>Spam</div>"+
-        "</div> <div id='second'> <input type='text' name='search' id='find'><button type='button' id='search'>search</button><br></div>" +
+        "</div> <div id='second'><img src='gmail.jpg'  width='42' height='42' id='logo'> <input type='text' name='search' id='find'><button type='button' id='search'>search</button><br></div>" +
         "<div id='third'></div>"+"<div id='dialog'>" +
 
         "<input type='text' id='to' value='to'>" +
@@ -11,6 +11,8 @@ $(function () {
         "<input type='text' id='msg' >" +
             "<button type='button' id='send'>send</button>"+
         "</div>");
+    $('#wrapper').append("<div id='middle'><div id='middle1'>Mail </div><div id='middle20'><div id='middle2'>" +
+        "<input type='checkbox'></div><div id='middle2'></div><div id='middle2'>More</div></div></div>");
 
 
     $("#inbox").click(function(){
