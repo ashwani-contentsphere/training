@@ -6,8 +6,8 @@ $(function () {
         "</div> <div id='second'><img src='gmail.jpg'  width='42' height='42' id='logo'> <input type='text' name='search' id='find'><button type='button' id='search'>search</button><br></div>" +
         "<div id='third'></div>"+"<div id='dialog'>" +
 
-        "<input type='text' id='to' value='to'>" +
-        "<input type='text' id='subject' value='subject'>" +
+        "<input type='text' id='to' value='To'>" +
+        "<input type='text' id='subject' value='Subject'>" +
         "<input type='text' id='msg' >" +
             "<button type='button' id='send'>send</button>"+
         "</div>");
@@ -17,6 +17,9 @@ $(function () {
 
     $("#inbox").click(function(){
         location.reload();
+    });
+    $("#inbox").hover(function(){
+
     });
     $("input:text:visible:first").focus();
     $( "#dialog" ).dialog({
@@ -86,13 +89,14 @@ $(function () {
 dataSuccess = function (json) {
 
     for (var i = 0; i < json.length; i++) {
-        $("#third").append("<div class='messages' id='" + i + "' ><h3>" + json[i].firstName + "  " + json[i].message + "</h3></div>");
+        $("#third").append(" <div class='messages' id="+i+"><div class='messages0'><input type='checkbox'><h3>"+json[i].firstName+"</h3></div><div " +
+            " id='" + i + "' ><h3>  " + json[i].message + "</h3></div></div>");
     }
     $(".messages").hover(
         function(){
             $(this).css("background-color", "#F4FBFC");
         }, function(){
-            $(this).css("background-color", "#E7F6FA");
+            $(this).css("background-color", "rgb(236, 238, 239)");
         }
     );
 

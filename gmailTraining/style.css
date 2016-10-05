@@ -1,16 +1,17 @@
-div {
-    display: block;
-}
+
 #wrapper {
     width: 1300px;
     height:1000px;
 }
+div:hover
+{}
+
 
 #first {
     float: left;
     width: 16%;
     height: 100%;
-    background: #EFF6F8;
+    background: white;
     position: fixed;
     margin-top: 107px;
 }
@@ -18,21 +19,22 @@ div {
     float: left;
     width: 100%;
     height: 8%;
-    background: #EFF6F8;
+    background: white;
     position: fixed;
     margin-top: 65px;
-
-
     border: ridge;
     border: 1px solid #e5e5e5;
+    border-bottom-style: inset;
+
 
 }
 #second {
     float: left;
     width: 100%;
-    height: 10%;
-    background: #f7f2f1;
+    height: 12%;
+    background: rgb(236, 238, 239);
     margin-left: -1px;
+    margin-top: -8px;
     position: fixed;
     display: inline;
 
@@ -54,7 +56,7 @@ div {
     margin-left: 35px;
     margin-top: 9px;
     border: none;
-    color: white;
+    color: #dad6d6;
     padding: 0px 18px;
     text-align: center;
     text-decoration: none;
@@ -80,13 +82,13 @@ div {
 }
 
 #inbox
-{
-    background: #EFF6F8;
-    margin-left: 18px;
-    margin-top: 0px;
+{       margin-top: 17px;
+    background: white;
+    margin-left: 4px;
+
     border: none;
-    color: red;
-    padding: 15px 32px;
+    color: #e05f5f;
+    padding: 4px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -94,17 +96,17 @@ div {
 }
 #middle1
 {
-    background: #EFF6F8;
+    background: white;
     margin-left: 18px;
-    margin-top: 0px;
+    margin-top: -10px;
     border: none;
-    color: red;
-    padding: 15px 32px;
+    color: #e05f5f;
+    padding: 0px 38px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 25px;
-    width: 57px;
+    width: 39px;
     height: 13px;
 }
 #middle2
@@ -114,50 +116,49 @@ div {
     margin-top: -7px;
     border: 1px solid #b3a9a9;
     color: black;
-    padding: 12px 17px;
+    padding: 11px 10px;
     /* text-align: center; */
     text-decoration: none;
     display: inline-block;
     font-size: 15px;
     width: 38px;
-    height: 11px;
+    height: 5px;
     float: left;
     margin: 0px 40px 0 0;
 }
 
 #D
 {
-    background: #EFF6F8;
-    margin-left: 18px;
+    background: white;
+    margin-left: 2px;
     margin-top: 0px;
     border: none;
     color: black;
-    padding: 15px 32px;
+    padding: 6px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 18px;
 }
 #sentmails
-{        background:#EFF6F8   ;
-    margin-left: 2px;
-
+{       background: white;
+    margin-left: -2px;
     border: none;
     color: black;
-    padding: 15px 32px;
+    padding: 1px 36px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 #compose {
     margin-left: 35px;
     margin-top: 28px;
-    background-color: #ff5454;
+    background: #d62525;
     border: none;
     color: white;
-    padding: 10px 20px;
+    padding: 9px 26px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -166,9 +167,9 @@ div {
 
 #search
 {
-    margin-top: -33px;
-    margin-left: 738px;
-    background-color: blue;
+    margin-top: -32px;
+    margin-left: 749px;
+    background-color: #63b1fd;
     border: none;
     color: white;
     padding: 11px 10px;
@@ -176,7 +177,7 @@ div {
     text-decoration: none;
     display: inline-block;
     font-size: 10px;
-    position: absolute
+    position: absolute;
 }
 
 
@@ -194,32 +195,99 @@ div {
     display: block;
     margin: auto auto auto;
     margin-top: -7px;
-    width: 50%;
+    width: 194%;
     height: 23%;
     padding: 11px 75px;
+    font-size: 13px;
+    border: 0!important;
+
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 #subject  {
     display: block;
     margin: auto auto auto;
     margin-top: -1px;
-    width: 50%;
+    width: 194%;
     height: 23%;
     padding: 11px 75px;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-size: 13px;
+
 }
 #msg  {
     display: block;
     margin: auto auto auto;
     margin-top: -1px;
-    width: 50%;
+    width: 194%;
     height: 23%;
     padding: 119px 75px;
-}
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-size: 13px;
 
+}
+#dialog{
+    float: right;
+}
 
 .messages {
     height: 4%;
-    background-color: #F4FBFC  ;
-    display: block;
+    width: 1122px;
+    background-color: rgb(236, 238, 239);
+    display: inline-flex;
     border: 1px solid #e5e5e5;
+    font-size: 14px;
+
+}
+.messages0 {
+    width: 30%;
+    height: 23%;
+    display: inline-flex;
+}
+.ui-widget-header {
+    border: 1px solid #191817;
+    background: black;
+    font-weight: bold;
+}
+.ui-dialog .ui-dialog-content {
+    position: relative;
+    border: 0;
+    padding: 0.5em 17em;
+
+}
+#wrapper>.ui-dialog {
+    position: absolute;
+    height: auto;
+    width: 441px;
+    top: 205.4063px;
+    left: 907.984px;
+}
+.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-draggable.ui-resizable
+{
+    position: fixed !important;
+    height: auto !important;
+    width: 441px !important;
+    top: 205.4063px !important;
+    left: 907.984px !important;
+}
+#send{
+    background-color: #63b1fd;
+    border-radius: 15%;
+    margin-left: 23px;
+    color: white;
+    font-size: 12px;
+    height: 29px;
+    width: 75px;
+}
+
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
 
 }

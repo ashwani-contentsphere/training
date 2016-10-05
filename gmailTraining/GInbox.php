@@ -4,9 +4,7 @@ A domain Class to demonstrate RESTful web services
 */
 Class Ginbox
 {
-
     private $inmessages;
-
 
     public function getInboxMessages()
     {
@@ -58,15 +56,5 @@ Class Ginbox
 
     }
 
-
-
-
 }
-
-
-
-
-
-
-
 ?>
