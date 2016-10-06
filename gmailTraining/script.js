@@ -83,7 +83,7 @@ function renderComponents() {
     render.appendHeader2();
     render.appendLeft();
     render.appendBody();
-    present.getmails();
+    present.getAllmails();
 }
 
 
@@ -132,61 +132,56 @@ function interactor(){
             }
         });
     };
-
 }
 
 function presenter()
 {    var interact=new interactor();
 
-    this.getmails=function(){
-        interact.ajax("Controller.php/getData?view=all","get",dataSuccess);
+    this.getAllmails=function(){
+        interact.ajax("Controller.php/getData?view=all","get",this.dataSuccessAllMails);
     };
-    this.getmail=function(id){
-        interact.ajax("Controller.php/getData?view=all&id"+id,"get",dataSuccess)
+
+    this.getSinglemail=function(id) {
+        interact.ajax("Controller.php/getData?view=single&id="+ id, "get", this.dataSuccessSingleMail)
+    };
+
+    this.dataSuccessAllMails = function (json) {
+
+        for (var i = 0; i < json.length; i++) {
+            $("#third").append(" <div class='messages' id="+i+"><div class='messages0'>" +
+                "<div id='checkboxmsg'><input type='checkbox'></div>" +
+                "<h3>"+json[i].firstName+"</h3></div><div " +
+                " id='" + i + "' ><h3>  " + json[i].message + "</h3></div></div>");
+        }
+        $(".messages").hover(
+            function(){
+                $(this).css("background-color", "#F4FBFC");
+            }, function(){
+                $(this).css("background-color", "rgb(236, 238, 239)");
+            }
+        );
     }
 
-
-
-
+    this.dataSuccessSingleMail=function (json) {
+        $("#third").append("<h1>Name :"+json.firstName+"</h1><br><h2>"+"Message : "+json.message+"</h2>" +
+            "<textarea rows='6' cols='80'>Click here to reply or Forward</textarea>");
+    }
 }
 
+function view()
+{  var present= new presenter();
 
-
-
-dataSuccess = function (json) {
-
-    for (var i = 0; i < json.length; i++) {
-        $("#third").append(" <div class='messages' id="+i+"><div class='messages0'>" +
-            "<div id='checkboxmsg'><input type='checkbox'></div>" +
-            "<h3>"+json[i].firstName+"</h3></div><div " +
-            " id='" + i + "' ><h3>  " + json[i].message + "</h3></div></div>");
-    }
-    $(".messages").hover(
-        function(){
-            $(this).css("background-color", "#F4FBFC");
-        }, function(){
-            $(this).css("background-color", "rgb(236, 238, 239)");
-        }
-    );
     $(".messages").click(function () {
         var x = this.id;
         $("#third").empty();
-        $("#third").append(
-            $.ajax({
-
-                url: "Controller.php/getData?view=single&id="+x,
-
-                dataType: "text",
-                success: function (data) {
-                    var json=JSON.parse(data)
-                    $("#third").append("<h1>Name :"+json.firstName+"</h1><br><h2>"+"Message : "+json.message+"</h2>" +
-                        "<textarea rows='6' cols='80'>Click here to reply or Forward</textarea>");
-
-                }
-            })
-        );
+        present.getSingleMail(x);
     });
 }
+
+
+
+
+
 dataSuccess2 = function (json) {
     for (var i = 0; i < json.length; i++) {
         $("#third").append("<div class='messages' id='"+i+"' >" +
