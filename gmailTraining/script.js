@@ -1,10 +1,11 @@
 $(function () {
-    renderMainUI.appendFirstDiv()
-    $('#wrapper').append("<div id='middle'><div id='middle1'>Mail </div>" +
-        "<div id='middle20'><div id='middle2'>" +
-        "<input type='checkbox'></div><div id='middle2'></div><div id='middle2'>More</div>" +
-        "</div><div id='middle3'></div>" +
-        "<div id='middle4'></div><div id='middle5'></div></div>");
+    var render= new renderMainUI();
+    render.appendHeader();
+    render.appendHeader2();
+    render.appendLeft();
+    render.appendBody();
+
+
     $("#less").hide();
     $("#moreitems").hide();
     $("#more").click(function(){
@@ -77,20 +78,14 @@ $(function () {
         );
     });
 
-    ;
 
 
-    $.ajax({
-        url: "Controller.php/getData?view=all",
-        dataType: "text",
-        success: function (data) {
-            dataSuccess(JSON.parse(data));
 
-        }
-    });
+
 });
-renderMainUI ={
-    appendFirstDiv: function() {
+function renderMainUI() {
+
+    this.appendLeft=function(){
         $('#wrapper').append("<div id='first'><button type='button' id='compose'>compose</button>" +
             "<button type='button' id='inbox'>inbox (2)</button>" +
             "<button type='button' id='sentmails'>Sent Mails</button>"
@@ -100,22 +95,52 @@ renderMainUI ={
             "<div id='moreitems1'>Important</div><div id='moreitems1'>chat</div>" +
             "<div id='moreitems1'>All mails" +
             "</div><div id='moreitems1'>Spam</div><div id='moreitems1'>Trash</div>" +
-            "<div id='moreitems1'>Categories</div></div>" +
-            "</div> <div id='second'><img src='gmail.jpg'  width='42' height='42' id='logo'>" +
-            " <input type='text' name='search' id='find'>" +
-            "<button type='button' id='search'>search</button><br></div>" +
-            "<div id='third'></div>" + "<div id='dialog'>" +
+            "<div id='moreitems1'>Categories</div></div>");
+    };
+    this.appendHeader=function(){$('#wrapper').append( " <div id='second'>" +
+        "<img src='gmail.jpg'  width='42' height='42' id='logo'>" +
+        " <input type='text' name='search' id='find'>" +
+        "<button type='button' id='search'>search</button><br></div>")};
 
-            "<input type='text' id='to' value='To'>" +
-            "<input type='text' id='subject' value='Subject'>" +
-            "<input type='text' id='msg' >" +
-            "<button type='button' id='send'>send</button>" +
-            "</div>");
-    }
-    appendSecond:function()
-
+    this.appendHeader2=function(){ $('#wrapper').append("<div id='middle'><div id='middle1'>Mail </div>" +
+        "<div id='middle20'><div id='middle2'>" +
+        "<input type='checkbox'></div><div id='middle2'></div><div id='middle2'>More</div>" +
+        "</div><div id='middle3'></div>" +
+        "<div id='middle4'></div><div id='middle5'></div></div>")};
+    this.appendBody=function(){$('#wrapper').append("<div id='third'></div>" + "<div id='dialog'>" +
+        "<input type='text' id='to' value='To'>" +
+        "<input type='text' id='subject' value='Subject'>" +
+        "<input type='text' id='msg' >" +
+        "<button type='button' id='send'>send</button>" +
+        "</div>")}
 }
-interactor=function(){}
+function interactor(){
+    ajax=function (url) {
+        $.ajax({
+            url: "Controller.php/getData?view=all",
+            dataType: "text",
+            success: function (data) {
+                dataSuccess(JSON.parse(data));
+            }
+        });
+    };
+    getmails=function(url){};
+}
+
+
+
+
+interactor1=function(url){
+    $.ajax({
+        url: "Controller.php/getData?view=all",
+        dataType: "text",
+        success: function (data) {
+            dataSuccess(JSON.parse(data));
+
+        }
+    });
+}
+
 dataSuccess = function (json) {
 
     for (var i = 0; i < json.length; i++) {
@@ -131,14 +156,9 @@ dataSuccess = function (json) {
             $(this).css("background-color", "rgb(236, 238, 239)");
         }
     );
-
-
-
     $(".messages").click(function () {
         var x = this.id;
-
         $("#third").empty();
-
         $("#third").append(
             $.ajax({
 
@@ -153,12 +173,9 @@ dataSuccess = function (json) {
                 }
             })
         );
-
-
     });
 }
 dataSuccess2 = function (json) {
-
     for (var i = 0; i < json.length; i++) {
         $("#third").append("<div class='messages' id='"+i+"' >" +
             "<h3>"+"to :"+json[i].to+"  "+"Subject  :" +json[i].subject+" Message  "+json[i].Message+"</h3></div>");
@@ -170,12 +187,9 @@ dataSuccess2 = function (json) {
             $(this).css("background-color", "rgb(236, 238, 239)");
         }
     );
-
     $(".messages").click(function () {
         var x = this.id;
-
         $("#third").empty();
-
         $("#third").append(
             $.ajax({
 
@@ -187,8 +201,6 @@ dataSuccess2 = function (json) {
                 }
             })
         );
-
-
     });
 }
 

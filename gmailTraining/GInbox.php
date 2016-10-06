@@ -19,7 +19,6 @@ Class Ginbox
         $array = json_decode($str, true);
         $inmessages = (object)$array[$id];
         $data = json_encode((array)$inmessages);
-        file_put_contents("results.txt", print_r($data, 1), 8);
         return $data;
 
     }
@@ -36,12 +35,14 @@ Class Ginbox
         $str=$str."]";
         return $str;
     }
-    public function getSentMail($q)
+    public function getSentMail($id)
     {
         $str = file_get_contents("newfile.txt");
         $str=$str."]";
         $array = json_decode($str, true);
-        echo "<h1>".$array[$q]["to"]."</h1>"."<br>"."</h2>".$array[$q]["subject"]."<br>"."</h2>".$array[$q]["Message"]."</h2>";
+        $inmessages = (object)$array[$id];
+        $data = json_encode((array)$inmessages);
+         return $data;
     }
 
     public function searchMails($string)
