@@ -24,7 +24,7 @@ Class Ginbox
 
     }
 
-    public function saveSentMails($data){
+    public function saveSentMail($data){
         $myfile = fopen("newfile.txt", "a");
         fwrite($myfile,$data);
     }
@@ -35,6 +35,13 @@ Class Ginbox
         $str = file_get_contents("newfile.txt");
         $str=$str."]";
         return $str;
+    }
+    public function getSentMail($q)
+    {
+        $str = file_get_contents("newfile.txt");
+        $str=$str."]";
+        $array = json_decode($str, true);
+        echo "<h1>".$array[$q]["to"]."</h1>"."<br>"."</h2>".$array[$q]["subject"]."<br>"."</h2>".$array[$q]["Message"]."</h2>";
     }
 
     public function searchMails($string)
