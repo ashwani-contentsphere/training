@@ -1,25 +1,5 @@
 $(function () {
-
-    $('#wrapper').append("<div id='first'><button type='button' id='compose'>compose</button>" +
-        "<button type='button' id='inbox'>inbox (2)</button>" +
-        "<button type='button' id='sentmails'>Sent Mails</button>"
-        +"<div id='D'>Starred</div>"+"<div id='D'>Drafts</div>" +
-        "<div id='D'>Spam</div><div id='more'>More ></div>" +
-        "<div id='less'>Less ></div><div id='moreitems'>" +
-        "<div id='moreitems1'>Important</div><div id='moreitems1'>chat</div>" +
-        "<div id='moreitems1'>All mails" +
-        "</div><div id='moreitems1'>Spam</div><div id='moreitems1'>Trash</div>" +
-        "<div id='moreitems1'>Categories</div></div>"+
-        "</div> <div id='second'><img src='gmail.jpg'  width='42' height='42' id='logo'>" +
-        " <input type='text' name='search' id='find'>" +
-        "<button type='button' id='search'>search</button><br></div>" +
-        "<div id='third'></div>"+"<div id='dialog'>" +
-
-        "<input type='text' id='to' value='To'>" +
-        "<input type='text' id='subject' value='Subject'>" +
-        "<input type='text' id='msg' >" +
-            "<button type='button' id='send'>send</button>"+
-        "</div>");
+    renderMainUI.appendFirstDiv()
     $('#wrapper').append("<div id='middle'><div id='middle1'>Mail </div>" +
         "<div id='middle20'><div id='middle2'>" +
         "<input type='checkbox'></div><div id='middle2'></div><div id='middle2'>More</div>" +
@@ -97,7 +77,7 @@ $(function () {
         );
     });
 
-   ;
+    ;
 
 
     $.ajax({
@@ -109,7 +89,33 @@ $(function () {
         }
     });
 });
+renderMainUI ={
+    appendFirstDiv: function() {
+        $('#wrapper').append("<div id='first'><button type='button' id='compose'>compose</button>" +
+            "<button type='button' id='inbox'>inbox (2)</button>" +
+            "<button type='button' id='sentmails'>Sent Mails</button>"
+            + "<div id='D'>Starred</div>" + "<div id='D'>Drafts</div>" +
+            "<div id='D'>Spam</div><div id='more'>More ></div>" +
+            "<div id='less'>Less ></div><div id='moreitems'>" +
+            "<div id='moreitems1'>Important</div><div id='moreitems1'>chat</div>" +
+            "<div id='moreitems1'>All mails" +
+            "</div><div id='moreitems1'>Spam</div><div id='moreitems1'>Trash</div>" +
+            "<div id='moreitems1'>Categories</div></div>" +
+            "</div> <div id='second'><img src='gmail.jpg'  width='42' height='42' id='logo'>" +
+            " <input type='text' name='search' id='find'>" +
+            "<button type='button' id='search'>search</button><br></div>" +
+            "<div id='third'></div>" + "<div id='dialog'>" +
 
+            "<input type='text' id='to' value='To'>" +
+            "<input type='text' id='subject' value='Subject'>" +
+            "<input type='text' id='msg' >" +
+            "<button type='button' id='send'>send</button>" +
+            "</div>");
+    }
+    appendSecond:function()
+
+}
+interactor=function(){}
 dataSuccess = function (json) {
 
     for (var i = 0; i < json.length; i++) {
@@ -184,13 +190,5 @@ dataSuccess2 = function (json) {
 
 
     });
-
-
-
-
-
-
-
-
 }
 
