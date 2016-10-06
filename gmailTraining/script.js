@@ -1,10 +1,5 @@
 $(function () {
-    var render= new renderMainUI();
-    render.appendHeader();
-    render.appendHeader2();
-    render.appendLeft();
-    render.appendBody();
-
+       renderComponents();
 
     $("#less").hide();
     $("#moreitems").hide();
@@ -78,13 +73,22 @@ $(function () {
         );
     });
 
-
-
-
-
 });
-function renderMainUI() {
 
+function renderComponents() {
+
+    var render= new renderMainUI();
+    var present=new presenter();
+    render.appendHeader();
+    render.appendHeader2();
+    render.appendLeft();
+    render.appendBody();
+    present.getmails();
+}
+
+
+
+function renderMainUI() {
     this.appendLeft=function(){
         $('#wrapper').append("<div id='first'><button type='button' id='compose'>compose</button>" +
             "<button type='button' id='inbox'>inbox (2)</button>" +
@@ -114,32 +118,40 @@ function renderMainUI() {
         "<button type='button' id='send'>send</button>" +
         "</div>")}
 }
+
+
 function interactor(){
-    ajax=function (url) {
+
+    this.ajax=function (url,type,dataSuccesss) {
         $.ajax({
-            url: "Controller.php/getData?view=all",
+            url: url,
+            type:type,
             dataType: "text",
             success: function (data) {
-                dataSuccess(JSON.parse(data));
+                dataSuccesss(JSON.parse(data));
             }
         });
     };
-    getmails=function(url){};
+
+}
+
+function presenter()
+{    var interact=new interactor();
+
+    this.getmails=function(){
+        interact.ajax("Controller.php/getData?view=all","get",dataSuccess);
+    };
+    this.getmail=function(id){
+        interact.ajax("Controller.php/getData?view=all&id"+id,"get",dataSuccess)
+    }
+
+
+
+
 }
 
 
 
-
-interactor1=function(url){
-    $.ajax({
-        url: "Controller.php/getData?view=all",
-        dataType: "text",
-        success: function (data) {
-            dataSuccess(JSON.parse(data));
-
-        }
-    });
-}
 
 dataSuccess = function (json) {
 
