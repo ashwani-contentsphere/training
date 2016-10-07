@@ -3,17 +3,13 @@
     width: 1300px;
     height:1000px;
 }
-div:hover
-{}
-
-
 #first {
     float: left;
     width: 16%;
     height: 100%;
     background: white;
     position: fixed;
-    margin-top: 107px;
+    margin-top: 120px;
 }
 #middle {
     float: left;
@@ -25,8 +21,6 @@ div:hover
     border: ridge;
     border: 1px solid #e5e5e5;
     border-bottom-style: inset;
-
-
 }
 #second {
     float: left;
@@ -37,7 +31,6 @@ div:hover
     margin-top: -8px;
     position: fixed;
     display: inline;
-
 }
 
 #third {
@@ -47,13 +40,9 @@ div:hover
     background: #EBF1F2;
     margin-left: 217px;
     margin-top: 117px;
-
 }
-
 #logo
-{
-
-    margin-left: 35px;
+{  margin-left: 35px;
     margin-top: 9px;
     border: none;
     color: #dad6d6;
@@ -61,31 +50,22 @@ div:hover
     text-align: center;
     text-decoration: none;
     display: inline-block;
-
     width: 78px;
     height: 53px;
-
 }
 #middle20
-{
-
-    margin-left: 95px;
+{  margin-left: 95px;
     margin-top: 9px;
     border: none;
     color: white;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-
-
-
 }
-
 #inbox
-{       margin-top: 17px;
+{   margin-top: 17px;
     background: white;
     margin-left: 4px;
-
     border: none;
     color: #e05f5f;
     padding: 4px 32px;
@@ -98,8 +78,7 @@ div:hover
     background-color: #e5e5e5;
 }
 #middle1
-{
-    background: white;
+{   background: white;
     margin-left: 18px;
     margin-top: -10px;
     border: none;
@@ -113,14 +92,13 @@ div:hover
     height: 13px;
 }
 #middle2
-{
-    background: gainsboro;
+{  background: gainsboro;
     margin-left: 41px;
     margin-top: -7px;
     border: 2px solid #b3a9a9;
+    border-radius: 11%;
     color: black;
     padding: 9px 10px;
-    /* text-align: center; */
     text-decoration: none;
     display: inline-block;
     font-size: 15px;
@@ -132,10 +110,8 @@ div:hover
 #middle2:hover{
     background-color:snow;
 }
-
 #middle3
-{
-    background: gainsboro;
+{  background: gainsboro;
     margin-left: 1056px;
     margin-top: -37px;
     color: black;
@@ -143,11 +119,11 @@ div:hover
     text-decoration: none;
     display: auto;
     border: 2px solid #b3a9a9;
+    border-radius: 11%;
     color: black;
     padding: 9px 10px;
     width: 17px;
     height: 12px
-
 }
 #middle3:hover{
     background-color: snow;
@@ -159,8 +135,7 @@ div:hover
     background-color: snow;
 }
 #middle4
-{
-    background: gainsboro;
+{  background: gainsboro;
     margin-left: 1015px;
     margin-top: -34px;
     color: black;
@@ -168,6 +143,7 @@ div:hover
     text-decoration: none;
     display: auto;
     border: 2px solid #b3a9a9;
+    border-radius: 11%;
     color: black;
     padding: 9px 10px;
     width: 17px;
@@ -183,13 +159,12 @@ div:hover
     text-decoration: none;
     display: auto;
     border: 2px solid #b3a9a9;
+    border-radius: 11%;
     color: black;
     padding: 9px 10px;
     width: 47px;
     height: 12px;
 }
-
-
 #D
 {
 background: white;
@@ -207,9 +182,8 @@ font-size: 18px;
 {
     background-color: #e5e5e5;
 }
-
 #sentmails
-{       background: white;
+{ background: white;
 margin-left: -2px;
 border: none;
 color: black;
@@ -217,13 +191,12 @@ padding: 1px 36px;
 text-align: center;
 text-decoration: none;
 display: inline-block;
-font-size: 16px;
-    margin-top: 3px;
+font-size: 16px;  margin-top: 3px;
 }
 #sentmails:hover{
     background-color: #e5e5e5;}
 #less
-{       background: white;
+{   background: white;
     margin-left: -103px;
     border: none;
     color: black;
@@ -234,7 +207,7 @@ font-size: 16px;
     font-size: 16px;
 }
 #more
-{       background: white;
+{   background: white;
     margin-left: -100px;
     border: none;
     color: black;
@@ -245,7 +218,7 @@ font-size: 16px;
     font-size: 16px;
 }
 #moreitems
-{       background: white;
+{    background: white;
     margin-left: -111px;
     border: none;
     color: black;
@@ -256,7 +229,7 @@ font-size: 16px;
     font-size: 16px;
 }
 #moreitems1
-{       background: white;
+{   background: white;
     margin-left: 86px;
     border: none;
     color: black;
@@ -322,10 +295,7 @@ width: 27%;
 height: 23%;
 padding: 5px 75px;
 }
-#find:hover
-{
 
-}
 #to  {
 display: block;
 margin: auto auto auto;
@@ -335,8 +305,7 @@ height: 23%;
 padding: 11px 75px;
 font-size: 13px;
 border: 0!important;
-
-outline: none;
+    outline: none;
 -webkit-box-shadow: none;
 box-shadow: none;
 }
@@ -371,18 +340,18 @@ float: right;
 }
 
 .messages {
-height: 4%;
-    width: 1012px;
-background-color: rgb(236, 238, 239);
-display: inline-flex;
-border: 1px solid #e5e5e5;
-font-size: 14px;
+    height: 4%;
+    width: 1123px;
+    background-color: rgb(236, 238, 239);
+    display: inline-flex;
+    border: 1px solid #e5e5e5;
+    font-size: 14px;
 
 }
 .messages0 {
-width: 30%;
-height: 23%;
-display: inline-flex;
+   width: 30%;
+   height: 23%;
+   display: inline-flex;
 }
 .ui-widget-header {
 border: 1px solid #191817;
@@ -450,4 +419,37 @@ textarea{
     border-radius:0;
 
 }
+.ui-button.ui-corner-all.ui-widget.ui-button-icon-only.ui-dialog-titlebar-close
+{
+    font-size: 0px;
+}
+#reply{
+    margin-left: -583px;
+    margin-top: 246px;
+    position: absolute;
+    background: snow;
+    color: white;
+    padding: 38px 291px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    border: ridge;
+    border: 2px solid #e5e5e5;
+    border-bottom-style: inset;
 
+}
+#replyButton
+{
+    margin-top: -3px;
+    background-color: #63b1fd;
+    border-radius: 9%;
+    margin-left: 56px;
+    color: white;
+    font-size: 17px;
+    height: 29px;
+    width: 75px;
+    position: absolute;
+    text-align: center;
+    border: 2px solid #e5e5e5;
+}
