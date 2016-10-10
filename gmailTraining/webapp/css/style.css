@@ -111,9 +111,9 @@
     background-color:snow;
 }
 #middle3
-{  background: gainsboro;
+{       background: url(//ssl.gstatic.com/ui/v1/icons/mail/sprite_black2.png) -36px -17px no-repeat;
     margin-left: 1056px;
-    margin-top: -37px;
+    margin-top: -33px;
     color: black;
     text-align: center;
     text-decoration: none;
@@ -121,10 +121,13 @@
     border: 2px solid #b3a9a9;
     border-radius: 11%;
     color: black;
-    padding: 9px 10px;
-    width: 17px;
-    height: 12px
+    padding: 9px 6px;
+    width: 18px;
+    height: 9px;
+    display: inline-grid;
+    position: absolute;
 }
+
 #middle3:hover{
     background-color: snow;
 }
@@ -135,9 +138,9 @@
     background-color: snow;
 }
 #middle4
-{  background: gainsboro;
-    margin-left: 1015px;
-    margin-top: -34px;
+{         background: url(//ssl.gstatic.com/ui/v1/icons/mail/sprite_black2.png) -19px -18px no-repeat;
+    margin-left: 1023px;
+    margin-top: -33px;
     color: black;
     text-align: center;
     text-decoration: none;
@@ -145,9 +148,9 @@
     border: 2px solid #b3a9a9;
     border-radius: 11%;
     color: black;
-    padding: 9px 10px;
-    width: 17px;
-    height: 12px;
+    padding: 8px 6px;
+    width: 18px;
+    height: 11px;
 }
 #middle5
 {
@@ -164,12 +167,13 @@
     padding: 9px 10px;
     width: 47px;
     height: 12px;
+    background: url(//ssl.gstatic.com/ui/v1/icons/mail/sprite_black2.png) 43px -17px no-repeat;
 }
 #D
 {
 background: white;
 margin-left: 2px;
-margin-top: 0px;
+margin-top: 2px;
 border: none;
 color: black;
 padding: 6px 32px;
@@ -187,7 +191,7 @@ font-size: 18px;
 margin-left: -2px;
 border: none;
 color: black;
-padding: 1px 36px;
+padding: 4px 36px;
 text-align: center;
 text-decoration: none;
 display: inline-block;
