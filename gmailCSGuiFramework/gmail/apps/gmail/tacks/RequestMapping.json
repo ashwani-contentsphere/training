@@ -1,0 +1,8 @@
+{
+  "getData":"getData",
+  "searchMail":"searchMail",
+  "sendMail":"sendMail",
+  "getSentMails":"getSentMails",
+  "getSingleMail":"getSingleMail",
+  "getSingleSentMail":"getSingleSentMail"
+}

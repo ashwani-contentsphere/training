@@ -1,0 +1,7 @@
+[
+  {
+    "containerId": "sendMail",
+    "presenter": "SendMailPresenter",
+    "view": "CSFormView"
+  }
+]

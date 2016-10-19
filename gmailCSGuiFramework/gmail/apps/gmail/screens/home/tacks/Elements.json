@@ -1,0 +1,34 @@
+[
+  {
+    "containerId": "Header",
+    "presenter": "HeaderPresenter",
+    "view": "CSFormView"
+  },
+
+  {
+    "containerId": "MailList",
+    "presenter": "MailListPresenter",
+    "view": "CSListView"
+  },
+
+  {
+    "containerId":"Menu",
+    "presenter": "MenuPresenter",
+    "view": "CSToolbarView"
+  },
+  {
+    "containerId":"SettingHeader",
+    "presenter": "SettingsHeaderPresenter",
+    "view": "CSToolbarView"
+  },
+  {
+    "containerId": "renderMail",
+    "presenter": "RenderMailPresenter",
+    "view": "CSContainerView"
+  },
+  {
+    "containerId": "renderMail2",
+    "presenter": "RenderMail2Presenter",
+    "view": "CSContainerView"
+  }
+]
